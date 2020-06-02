@@ -22,4 +22,3 @@ Nmap ("Network Mapper") is a free and open source (license) utility for network 
 `python convert_to_mysql.py`
 
 # Thanks
-Thanks to Sihong Hong and Jiaming Mu for their great help.
