@@ -33,7 +33,8 @@ if __name__ == "__main__":
     if not os.path.exists(result_dir):
         os.mkdir(result_dir)
     parser = argparse.ArgumentParser()
-    parser.add_argument('--args', type=str, default="--script=snmp-interfaces -sV -T4 -O -R -PE -PA -PS -PU53,161 --mtu 64 -f")
+    # parser.add_argument('--args', type=str, default="--script=snmp-interfaces -sV -T4 -O -R -PE -PA -PS -PU53,161 --mtu 64 -f")
+    parser.add_argument('--args', type=str, default="--traceroute -sV -T4 -O -R -PE -PA -PS -PU53,161 --mtu 64 -f")
     # -sV Version Detection
     # -T4 Timing template, T4 is aggressive
     # -O Operating system detection
@@ -46,6 +47,7 @@ if __name__ == "__main__":
     # -PS SYN ping
     # -PU UDP probes
     # --mtu 16
+    # --traceroute show real hop distance
     args = parser.parse_args().args
     ip_spaces = ['59.66.0-255.0-255',
     		    '118.229.0-31.0-255',
