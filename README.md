@@ -1,24 +1,30 @@
-# Introduction
-The project aims to scan and record IP assets of TsingHua University with the help of whois, nmap and MySQL.
+# MultiProcess-Nmap
 
-## What is whois
-The **whois** is a WHOIS client. It is used to communicate with the WHOIS server, which returns information about registered domains, IP addresses, nameservers and so on. You can go to [whois](https://who.is/) for detailed infomation.
+## What’s MultiProcess-Nmap
+A simple script for nmap usage with multiprocess in python.
+We use it to nmap a /16 range network to find 68 hosts alive, which costs only 8 min.
 
-## What is nmap
-Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing. You can go to [nmap](https://nmap.org/) for detailed instruction.
 
-# How to
+## Requirements
 
-## Find out all THU's IP spaces
-`sudo apt install whois`
-`python find_thu_ip.py`
+python≥3.0 with python-nmap package
 
-## Scan each IP with multiprocess
-`pip install python-nmap`
-`sudo python scan_ip.py`
+## Installation
 
-## Convert scanned results to MySQL database
-`install pymysql`
-`python convert_to_mysql.py`
+ pip install python-nmap
 
-# Thanks
+## Usage
+
+cd codes
+
+sudo /your/python/path multiProcess.py --host 166.111.0.0/24 --fileName 166log
+
+
+
+There're also other options which you can refer to source code file which is rather short. You'd better change other options in source code file, cause I haven't tested them :)
+
+
+
+## More
+
+Output is presented in the Json format ,you can refer to python-nmap module usage for more details. I also give two results samples in data directory for your reference .
